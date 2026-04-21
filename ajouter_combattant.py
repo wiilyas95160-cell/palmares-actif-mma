@@ -18,23 +18,21 @@ def est_actif(url_adversaire):
         lignes = module_pro.select('tr:not(.table_head)')
         if not lignes: return False
         
-        # --- 1. Critère de TEMPS (A combattu récemment) ---
+        # --- 1. Critère de TEMPS (A combattu dans la dernière année) ---
         date_texte = lignes[0].find('span', class_='sub_line').text
         annee_dernier_combat = int(date_texte.split('/')[-1].strip())
         annee_actuelle = datetime.now().year
         actif_recellement = (annee_actuelle - annee_dernier_combat) <= 1
         
-        # --- 2. Critère d'ORGANISATION (Dernier combat à l'UFC) ---
-        # Sur Sherdog, la 3ème colonne (index 2) contient l'événement
+        # --- 2. Critère d'ORGANISATION (STRICTEMENT UFC) ---
         evenement_tag = lignes[0].find_all('td')[2].find('a')
         if evenement_tag:
             nom_event = evenement_tag.text.upper()
-            # On vérifie si c'est un événement UFC ou affilié
-            est_ufc = "UFC" in nom_event or "ULTIMATE FIGHTING" in nom_event or "CONTENDER" in nom_event
+            # On cherche UNIQUEMENT le mot "UFC"
+            est_ufc = "UFC" in nom_event
         else:
             est_ufc = False
             
-        # Il faut obligatoirement valider les DEUX conditions
         return actif_recellement and est_ufc
         
     except Exception as e:
