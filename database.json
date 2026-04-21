@@ -1,0 +1,287 @@
+{
+    "Poids Légers": [
+        {
+            "Nom": "Max Holloway",
+            "Palmares_Actif": "14 V - 7 D",
+            "Victoires_Actives": 14,
+            "Defaites_Actives": 7,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 36
+        },
+        {
+            "Nom": "Mateusz Gamrot",
+            "Palmares_Actif": "13 V - 4 D",
+            "Victoires_Actives": 13,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 31
+        },
+        {
+            "Nom": "Arman Tsarukyan",
+            "Palmares_Actif": "11 V - 2 D",
+            "Victoires_Actives": 11,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 26
+        },
+        {
+            "Nom": "Renato Moicano",
+            "Palmares_Actif": "11 V - 5 D",
+            "Victoires_Actives": 11,
+            "Defaites_Actives": 5,
+            "Nuls_Actifs": 1,
+            "NC_Actifs": 0,
+            "Total_Combats": 29
+        },
+        {
+            "Nom": "Justin Gaethje",
+            "Palmares_Actif": "10 V - 3 D",
+            "Victoires_Actives": 10,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 32
+        },
+        {
+            "Nom": "Paddy Pimblett",
+            "Palmares_Actif": "9 V - 2 D",
+            "Victoires_Actives": 9,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 27
+        },
+        {
+            "Nom": "Dan Hooker",
+            "Palmares_Actif": "9 V - 8 D",
+            "Victoires_Actives": 9,
+            "Defaites_Actives": 8,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 38
+        },
+        {
+            "Nom": "Ilia Topuria",
+            "Palmares_Actif": "8 V - 0 D",
+            "Victoires_Actives": 8,
+            "Defaites_Actives": 0,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 17
+        },
+        {
+            "Nom": "Mauricio Ruffy",
+            "Palmares_Actif": "7 V - 2 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 15
+        },
+        {
+            "Nom": "Charles Oliveira",
+            "Palmares_Actif": "0 V - 0 D",
+            "Victoires_Actives": 0,
+            "Defaites_Actives": 0,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 4
+        }
+    ],
+    "Poids Mi-Moyens": [
+        {
+            "Nom": "Islam Makhachev",
+            "Palmares_Actif": "16 V - 1 D",
+            "Victoires_Actives": 16,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 29
+        },
+        {
+            "Nom": "Carlos Prates",
+            "Palmares_Actif": "13 V - 1 D",
+            "Victoires_Actives": 13,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 30
+        },
+        {
+            "Nom": "Michael Morales",
+            "Palmares_Actif": "12 V - 0 D",
+            "Victoires_Actives": 12,
+            "Defaites_Actives": 0,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 19
+        },
+        {
+            "Nom": "Belal Muhammad",
+            "Palmares_Actif": "11 V - 4 D",
+            "Victoires_Actives": 11,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 1,
+            "Total_Combats": 30
+        },
+        {
+            "Nom": "Sean Brady",
+            "Palmares_Actif": "11 V - 2 D",
+            "Victoires_Actives": 11,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 20
+        },
+        {
+            "Nom": "Jack Della Maddalena",
+            "Palmares_Actif": "10 V - 2 D",
+            "Victoires_Actives": 10,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 21
+        },
+        {
+            "Nom": "Gabriel Bonfim",
+            "Palmares_Actif": "10 V - 1 D",
+            "Victoires_Actives": 10,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 20
+        },
+        {
+            "Nom": "Joaquin Buckley",
+            "Palmares_Actif": "7 V - 5 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 5,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 28
+        },
+        {
+            "Nom": "Leon Edwards",
+            "Palmares_Actif": "6 V - 4 D",
+            "Victoires_Actives": 6,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 1,
+            "Total_Combats": 29
+        },
+        {
+            "Nom": "Kamaru Usman",
+            "Palmares_Actif": "4 V - 3 D",
+            "Victoires_Actives": 4,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 25
+        }
+    ],
+    "Poids Moyens": [
+        {
+            "Nom": "Caio Borralho",
+            "Palmares_Actif": "14 V - 1 D",
+            "Victoires_Actives": 14,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 21
+        },
+        {
+            "Nom": "Brendan Allen",
+            "Palmares_Actif": "13 V - 6 D",
+            "Victoires_Actives": 13,
+            "Defaites_Actives": 6,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 33
+        },
+        {
+            "Nom": "Dricus Du Plessis",
+            "Palmares_Actif": "12 V - 2 D",
+            "Victoires_Actives": 12,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 26
+        },
+        {
+            "Nom": "Israel Adesanya",
+            "Palmares_Actif": "12 V - 6 D",
+            "Victoires_Actives": 12,
+            "Defaites_Actives": 6,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 30
+        },
+        {
+            "Nom": "Reinier de Ridder",
+            "Palmares_Actif": "11 V - 2 D",
+            "Victoires_Actives": 11,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 25
+        },
+        {
+            "Nom": "Sean Strickland",
+            "Palmares_Actif": "10 V - 7 D",
+            "Victoires_Actives": 10,
+            "Defaites_Actives": 7,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 37
+        },
+        {
+            "Nom": "Anthony Hernandez",
+            "Palmares_Actif": "10 V - 3 D",
+            "Victoires_Actives": 10,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 19
+        },
+        {
+            "Nom": "Khamzat Chimaev",
+            "Palmares_Actif": "9 V - 0 D",
+            "Victoires_Actives": 9,
+            "Defaites_Actives": 0,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 15
+        },
+        {
+            "Nom": "Nassourdine Imavov",
+            "Palmares_Actif": "7 V - 3 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 1,
+            "Total_Combats": 22
+        },
+        {
+            "Nom": "Joe Pyfer",
+            "Palmares_Actif": "7 V - 3 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 19
+        },
+        {
+            "Nom": "Robert Whittaker",
+            "Palmares_Actif": "6 V - 7 D",
+            "Victoires_Actives": 6,
+            "Defaites_Actives": 7,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 35
+        }
+    ]
+}
