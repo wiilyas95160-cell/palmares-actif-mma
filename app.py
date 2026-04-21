@@ -17,16 +17,59 @@ HEADERS = {
 def trouver_url_sherdog(recherche):
     if "sherdog.com/fighter" in recherche:
         return recherche
-    nom_encode = urllib.parse.quote_plus(recherche)
-    url_recherche = f"https://www.sherdog.com/stats/fightfinder?SearchTxt={nom_encode}"
-    reponse = requests.get(url_recherche, headers=HEADERS)
-    if reponse.status_code == 200:
+        
+    def requete_sherdog(texte_recherche):
+        nom_encode = urllib.parse.quote_plus(texte_recherche)
+        url_recherche = f"https://www.sherdog.com/stats/fightfinder?SearchTxt={nom_encode}"
+        reponse = requests.get(url_recherche, headers=HEADERS)
+        
+        if reponse.status_code != 200:
+            return None
+            
         soup = BeautifulSoup(reponse.text, 'html.parser')
-        liens = soup.select('td a[href^="/fighter/"]')
-        for lien in liens:
-            if "-" in lien['href'] and lien.text.strip():
-                return "https://www.sherdog.com" + lien['href']
-    return None
+        # On cible le tableau des résultats de recherche
+        lignes = soup.select('table.fightfinder_result tr:not(.table_head)')
+        
+        meilleur_lien = None
+        max_combats = -1
+        
+        for ligne in lignes:
+            colonnes = ligne.find_all('td')
+            # Sherdog a 9 colonnes dans son tableau de résultats
+            if len(colonnes) >= 7:
+                lien_tag = colonnes[1].find('a')
+                if lien_tag and '/fighter/' in lien_tag['href']:
+                    try:
+                        # Sur Sherdog, Win est à la colonne 5 et Loss à la 6
+                        victoires = int(colonnes[5].text)
+                        defaites = int(colonnes[6].text)
+                        total_combats = victoires + defaites
+                    except:
+                        total_combats = 0
+                        
+                    # On garde le combattant avec le plus gros palmarès (le vrai pro)
+                    if total_combats > max_combats:
+                        max_combats = total_combats
+                        meilleur_lien = "https://www.sherdog.com" + lien_tag['href']
+                        
+        # Sécurité : Si l'analyse du tableau échoue, on prend le premier lien dispo
+        if not meilleur_lien:
+            premier_lien = soup.select_one('td a[href^="/fighter/"]')
+            if premier_lien:
+                meilleur_lien = "https://www.sherdog.com" + premier_lien['href']
+                
+        return meilleur_lien
+
+    # 1. On tente la recherche exacte tapée par l'utilisateur
+    resultat = requete_sherdog(recherche)
+    
+    # 2. Si rien n'est trouvé (ex: "cyril gane"), on tente avec juste le dernier mot ("gane")
+    if not resultat:
+        mots = recherche.split()
+        if len(mots) > 1:
+            resultat = requete_sherdog(mots[-1]) # On cherche uniquement le nom de famille
+            
+    return resultat
 
 def est_actif(url_adversaire):
     try:
@@ -36,11 +79,25 @@ def est_actif(url_adversaire):
         if not module_pro: return False
         lignes = module_pro.select('tr:not(.table_head)')
         if not lignes: return False
+        
+        # --- 1. Critère de TEMPS (A combattu dans la dernière année) ---
         date_texte = lignes[0].find('span', class_='sub_line').text
         annee_dernier_combat = int(date_texte.split('/')[-1].strip())
         annee_actuelle = datetime.now().year
-        return (annee_actuelle - annee_dernier_combat) <= 1
-    except:
+        actif_recellement = (annee_actuelle - annee_dernier_combat) <= 1
+        
+        # --- 2. Critère d'ORGANISATION (STRICTEMENT UFC) ---
+        evenement_tag = lignes[0].find_all('td')[2].find('a')
+        if evenement_tag:
+            nom_event = evenement_tag.text.upper()
+            # On cherche UNIQUEMENT le mot "UFC"
+            est_ufc = "UFC" in nom_event
+        else:
+            est_ufc = False
+            
+        return actif_recellement and est_ufc
+        
+    except Exception as e:
         return False
 
 # --- ROUTES DU SITE ---
@@ -94,7 +151,7 @@ def analyze():
                     # Si le nom correspond, on renvoie tout de suite !
                     if recherche_lower in fighter['Nom'].lower():
                         return jsonify({
-                            'name': fighter['Nom'] + " (Chargé instantanément ⚡)",
+                            'name': fighter['Nom'],
                             'total_fights': fighter['Total_Combats'],
                             'wins': fighter['Victoires_Actives'],
                             'losses': fighter['Defaites_Actives'],

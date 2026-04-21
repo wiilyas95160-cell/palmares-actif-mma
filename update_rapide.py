@@ -38,17 +38,18 @@ def est_actif(url_adversaire):
         lignes = module_pro.select('tr:not(.table_head)')
         if not lignes: return False
         
-        # --- 1. Critère de TEMPS ---
+        # --- 1. Critère de TEMPS (A combattu dans la dernière année) ---
         date_texte = lignes[0].find('span', class_='sub_line').text
         annee_dernier_combat = int(date_texte.split('/')[-1].strip())
         annee_actuelle = datetime.now().year
         actif_recellement = (annee_actuelle - annee_dernier_combat) <= 1
         
-        # --- 2. Critère d'ORGANISATION (UFC Uniquement) ---
+        # --- 2. Critère d'ORGANISATION (STRICTEMENT UFC) ---
         evenement_tag = lignes[0].find_all('td')[2].find('a')
         if evenement_tag:
             nom_event = evenement_tag.text.upper()
-            est_ufc = "UFC" in nom_event or "ULTIMATE FIGHTING" in nom_event or "CONTENDER" in nom_event
+            # On cherche UNIQUEMENT le mot "UFC"
+            est_ufc = "UFC" in nom_event
         else:
             est_ufc = False
             
