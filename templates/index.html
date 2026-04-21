@@ -6,28 +6,34 @@
     <title>Palmarès Actif - MMA</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; text-align: center; padding: 40px; color: #333; }
-        .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0px 8px 20px rgba(0,0,0,0.05); max-width: 800px; margin: auto; }
-        h1 { color: #d32f2f; }
+        .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0px 8px 20px rgba(0,0,0,0.05); max-width: 900px; margin: auto; }
+        h1 { color: #d32f2f; margin-bottom: 5px; }
         input[type="text"] { width: 80%; padding: 12px; margin: 15px 0; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; }
         button { background-color: #28a745; color: white; border: none; padding: 12px 25px; font-size: 16px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.3s; }
         button:hover { background-color: #218838; }
+        .btn-help { background-color: #007bff; margin-bottom: 20px; }
+        .btn-help:hover { background-color: #0069d9; }
+        
         #loading { display: none; color: #007bff; margin-top: 20px; font-weight: bold; font-size: 18px; }
         #result { margin-top: 25px; text-align: left; background: #f8f9fa; padding: 20px; border-radius: 8px; display: none; border-left: 5px solid #28a745;}
         .record { font-size: 32px; color: #28a745; text-align: center; margin: 10px 0; font-weight: bold;}
         
-        /* Design des onglets */
-        .tabs { margin-top: 40px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        .tab-btn { background-color: #eee; color: #333; border: none; padding: 10px 20px; font-size: 16px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.2s; }
+        .tabs { margin-top: 30px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .tab-btn { background-color: #eee; color: #333; border: none; padding: 10px 20px; font-size: 16px; border-radius: 6px; cursor: pointer; font-weight: bold; }
         .tab-btn.active { background-color: #d32f2f; color: white; }
-        .tab-btn:hover:not(.active) { background-color: #ddd; }
         
-        /* Design des tableaux */
         .tab-content { display: none; margin-top: 20px; text-align: left; animation: fadeIn 0.3s; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; background: white; }
         th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: center; }
         th { background-color: #333; color: white; }
-        tr:hover { background-color: #f1f1f1; }
+        tr:hover { background-color: #f8f9fa; }
         .rank-col { font-weight: bold; color: #d32f2f; }
+        .comp-index { background: #fff3f3; padding: 10px; border-radius: 6px; border: 1px solid #ffcccc; margin-bottom: 15px; font-weight: bold; color: #c30000; display: inline-block; }
+
+        /* Style de la fenêtre modale */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); }
+        .modal-content { background-color: white; margin: 10% auto; padding: 30px; border-radius: 15px; width: 80%; max-width: 600px; text-align: left; line-height: 1.6; position: relative; }
+        .close { position: absolute; right: 20px; top: 10px; font-size: 28px; font-weight: bold; cursor: pointer; }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
@@ -35,25 +41,27 @@
 <body>
     <div class="container">
         <h1>🥊 Palmarès "Actif"</h1>
-        <p>Découvrez le vrai palmarès d'un combattant face à la concurrence actuelle.</p>
+        <p>Le seul classement basé sur la réalité du roster actuel de l'UFC.</p>
         
+        <button class="btn-help" onclick="openModal()">❓ Comprendre les statistiques</button>
+
         <form id="fightForm">
-            <input type="text" id="urlInput" placeholder="Entrez un nom (ex: Islam Makhachev)..." required>
-            <button type="submit">Rechercher</button>
+            <input type="text" id="urlInput" placeholder="Rechercher un combattant (ex: Benoit Saint Denis)..." required>
+            <button type="submit">Analyser</button>
         </form>
 
-        <div id="loading">📡 Recherche en cours...</div>
+        <div id="loading">📡 Analyse du roster en cours...</div>
         
         <div id="result">
             <h3 id="res-name" style="text-align: center;"></h3>
-            <p><strong>Combats totaux analysés :</strong> <span id="res-total"></span></p>
-            <p style="text-align: center; margin-top: 20px;"><strong>Statistiques face aux combattants actifs :</strong></p>
+            <p><strong>Combats totaux en carrière :</strong> <span id="res-total"></span></p>
             <div class="record" id="res-record"></div>
+            <p style="text-align: center; font-size: 0.9em; color: #666;">(Victoires vs adversaires actifs à l'UFC uniquement)</p>
         </div>
 
-        <hr style="margin: 40px 0; border: 1px solid #eee;">
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
 
-        <h2 style="color: #333;">🏆 Classements Actuels</h2>
+        <h2>🏆 Classements par Catégorie</h2>
         
         {% if db %}
             <div class="tabs">
@@ -64,36 +72,29 @@
 
             {% for categorie, combattants in db.items() %}
                 <div id="{{ categorie }}" class="tab-content" {% if loop.first %}style="display: block;"{% endif %}>
+                    <div class="comp-index">🔥 Indice de compétitivité : {{ indices[categorie] }}%</div>
                     <table>
                         <thead>
                             <tr>
                                 <th>Rang</th>
                                 <th>Combattant</th>
-                                <th>Palmarès Actif</th>
-                                <th title="Pourcentage de victoire contre des adversaires encore en activité">Taux de Victoire 📊</th>
-                                <th title="Nombre de combats contre des adversaires à la retraite ou inactifs">Combats Obsolètes 🕰️</th>
+                                <th>Record Actif</th>
+                                <th>Efficacité 📊</th>
+                                <th>Obsolètes 🕰️</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for fighter in combattants %}
                             <tr>
                                 <td class="rank-col">
-                                    {% if loop.index0 == 0 %}
-                                        👑 Champ.
-                                    {% else %}
-                                        #{{ loop.index0 }}
-                                    {% endif %}
+                                    {% if loop.index0 == 0 %} 👑 Champ. {% else %} #{{ loop.index0 }} {% endif %}
                                 </td>
                                 <td style="text-align: left; font-weight: bold;">{{ fighter.Nom }}</td>
                                 <td>{{ fighter.Palmares_Actif }}</td>
-                                
                                 <td style="font-weight: bold; color: {% if fighter.Taux_Victoire >= 80 %}#28a745{% elif fighter.Taux_Victoire <= 50 %}#d32f2f{% else %}#555{% endif %};">
-                                    {{ fighter.Taux_Victoire }} %
+                                    {{ fighter.Taux_Victoire }}%
                                 </td>
-                                
-                                <td style="color: #888;">
-                                    {{ fighter.Combats_Inactifs }}
-                                </td>
+                                <td style="color: #999; font-size: 0.9em;">{{ fighter.Combats_Inactifs }}</td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -101,22 +102,34 @@
                 </div>
             {% endfor %}
         {% else %}
-            <p style="color: #888;">Aucune donnée disponible. Veuillez lancer la mise à jour.</p>
+            <p style="color: #888;">Base de données en cours de chargement...</p>
         {% endif %}
+    </div>
 
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 style="color:#d32f2f; margin-top: 0;">📖 Guide du Palmarès Actif</h2>
+            <p><strong>1. C'est quoi un "Combattant Actif" ?</strong><br>
+            Un adversaire est considéré comme actif s'il a combattu à l'<strong>UFC</strong> au moins une fois au cours des <strong>365 derniers jours</strong>.</p>
+            
+            <p><strong>2. Pourquoi Ian Garry est 12-0 au lieu de 12-1 ?</strong><br>
+            Si un combattant a perdu contre quelqu'un qui n'est plus à l'UFC (retraite, départ au PFL) ou qui n'a pas combattu depuis un an, cette défaite est retirée de son record "Actif". On ne mesure que sa dangerosité face au roster actuel.</p>
+            
+            <p><strong>3. Combats Obsolètes 🕰️</strong><br>
+            C'est le nombre de victoires ou défaites contre des combattants qui ne sont plus actifs. Plus ce chiffre est élevé, plus le record officiel est "trompeur" par rapport au niveau actuel.</p>
+        </div>
     </div>
 
     <script>
-        // --- 1. Gestion de la recherche (Cache ou Scraping) ---
+        // Gestion de la recherche
         document.getElementById('fightForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const url = document.getElementById('urlInput').value;
             const loading = document.getElementById('loading');
             const resultDiv = document.getElementById('result');
-
             loading.style.display = 'block';
             resultDiv.style.display = 'none';
-
             try {
                 const response = await fetch('/analyze', {
                     method: 'POST',
@@ -124,36 +137,30 @@
                     body: JSON.stringify({ url: url })
                 });
                 const data = await response.json();
-
-                if (data.error) {
-                    alert("Erreur : " + data.error);
-                } else {
-                    document.getElementById('res-name').innerText = "Résultats pour " + data.name;
+                if (data.error) { alert(data.error); } 
+                else {
+                    document.getElementById('res-name').innerText = data.name;
                     document.getElementById('res-total').innerText = data.total_fights;
-                    document.getElementById('res-record').innerText = `${data.wins} V - ${data.losses} D - ${data.draws} N (${data.nc} NC)`;
+                    document.getElementById('res-record').innerText = `${data.wins} V - ${data.losses} D`;
                     resultDiv.style.display = 'block';
                 }
-            } catch (err) {
-                alert("Erreur de communication avec le serveur.");
-            }
+            } catch (err) { alert("Erreur serveur."); }
             loading.style.display = 'none';
         });
 
-        // --- 2. Gestion visuelle des onglets ---
+        // Gestion des onglets
         function showTab(event, catName) {
-            // Cacher tous les tableaux
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.style.display = 'none';
-            });
-            
-            // Enlever la couleur rouge de tous les boutons
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // Afficher le bon tableau et mettre le bouton en rouge
+            document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.getElementById(catName).style.display = 'block';
             event.currentTarget.classList.add('active');
+        }
+
+        // Gestion Modale
+        function openModal() { document.getElementById('infoModal').style.display = "block"; }
+        function closeModal() { document.getElementById('infoModal').style.display = "none"; }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('infoModal')) { closeModal(); }
         }
     </script>
 </body>

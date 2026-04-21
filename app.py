@@ -48,28 +48,31 @@ def est_actif(url_adversaire):
 @app.route('/')
 def home():
     base_de_donnees = {}
+    indices_competitivite = {}
+    
     if os.path.exists('database.json'):
         with open('database.json', 'r', encoding='utf-8') as fichier:
             base_de_donnees = json.load(fichier)
             
-            # --- CALCUL DES STATISTIQUES À LA VOLÉE ---
             for categorie, combattants in base_de_donnees.items():
+                total_winrate = 0
+                count = 0
                 for fighter in combattants:
-                    # 1. Calcul du Taux de Victoire (Win Rate) Actif
+                    # Calcul Winrate (déjà présent)
                     total_actifs = fighter['Victoires_Actives'] + fighter['Defaites_Actives'] + fighter['Nuls_Actifs']
-                    if total_actifs > 0:
-                        taux = (fighter['Victoires_Actives'] / total_actifs) * 100
-                        fighter['Taux_Victoire'] = round(taux, 1) # Arrondi à 1 chiffre après la virgule
-                    else:
-                        fighter['Taux_Victoire'] = 0.0
+                    taux = (fighter['Victoires_Actives'] / total_actifs * 100) if total_actifs > 0 else 0
+                    fighter['Taux_Victoire'] = round(taux, 1)
+                    
+                    # Calcul Combats Obsolètes (déjà présent)
+                    fighter['Combats_Inactifs'] = max(0, fighter['Total_Combats'] - (total_actifs + fighter['NC_Actifs']))
+                    
+                    total_winrate += taux
+                    count += 1
+                
+                # Calcul de l'indice de la catégorie
+                indices_competitivite[categorie] = round(total_winrate / count, 1) if count > 0 else 0
 
-                    # 2. Calcul des Combats "Obsolètes" (Vétéran vs Prospect)
-                    # On prend le total de sa carrière moins les combats contre des actifs
-                    combats_inactifs = fighter['Total_Combats'] - (total_actifs + fighter['NC_Actifs'])
-                    # On s'assure de ne pas avoir de nombre négatif en cas de bug de Sherdog
-                    fighter['Combats_Inactifs'] = max(0, combats_inactifs) 
-
-    return render_template('index.html', db=base_de_donnees)
+    return render_template('index.html', db=base_de_donnees, indices=indices_competitivite)
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
