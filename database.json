@@ -46,6 +46,15 @@
             "Total_Combats": 36
         },
         {
+            "Nom": "Benoît Saint Denis",
+            "Palmares_Actif": "13 V - 3 D",
+            "Victoires_Actives": 13,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 21
+        },
+        {
             "Nom": "Paddy Pimblett",
             "Palmares_Actif": "9 V - 2 D",
             "Victoires_Actives": 9,
@@ -109,6 +118,15 @@
             "Nuls_Actifs": 0,
             "NC_Actifs": 0,
             "Total_Combats": 21
+        },
+        {
+            "Nom": "Ian Machado Garry",
+            "Palmares_Actif": "12 V - 0 D",
+            "Victoires_Actives": 12,
+            "Defaites_Actives": 0,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 18
         },
         {
             "Nom": "Michael Morales",
