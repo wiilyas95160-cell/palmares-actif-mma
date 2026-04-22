@@ -36,6 +36,66 @@
         .close { position: absolute; right: 20px; top: 10px; font-size: 28px; font-weight: bold; cursor: pointer; }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        /* =========================================
+           📱 ADAPTATION MOBILE (RESPONSIVE DESIGN)
+           ========================================= */
+        @media (max-width: 768px) {
+            body { 
+                padding: 10px; 
+            }
+            .container { 
+                padding: 15px; 
+            }
+            h1 { 
+                font-size: 24px; 
+            }
+            
+            /* 1. Barre de recherche adaptée au pouce */
+            input[type="text"] { 
+                width: 100%; 
+                box-sizing: border-box; 
+            }
+            form button { 
+                width: 100%; 
+                margin-top: 10px; 
+            }
+
+            /* 2. Menu des catégories : Défilement horizontal (Swipe) */
+            .tabs { 
+                flex-wrap: nowrap; /* Empêche les boutons de s'empiler sur 10 lignes */
+                overflow-x: auto; /* Active le scroll horizontal */
+                justify-content: flex-start; 
+                padding-bottom: 10px; /* Laisse de la place pour la barre de défilement */
+                -webkit-overflow-scrolling: touch; /* Rend le swipe fluide sur iPhone */
+            }
+            .tab-btn { 
+                flex: 0 0 auto; /* Empêche le bouton de s'écraser */
+                font-size: 14px; 
+                padding: 8px 12px; 
+            }
+
+            /* 3. Tableaux : Défilement horizontal pour ne rien couper */
+            .tab-content { 
+                overflow-x: auto; 
+                -webkit-overflow-scrolling: touch;
+                margin-top: 10px;
+                border-radius: 8px;
+            }
+            table { 
+                min-width: 500px; /* Force le tableau à garder une taille lisible */
+            }
+            th, td { 
+                padding: 10px 8px; 
+                font-size: 13px; /* Texte un peu plus petit */
+            }
+            
+            /* Ajustement de la fenêtre d'aide (Modal) */
+            #infoModal > div {
+                width: 90% !important;
+                margin: 20% auto !important;
+                padding: 20px !important;
+            }
+        }
     </style>
 </head>
 <body>
