@@ -15,10 +15,32 @@ URL_EXCEPTIONS = {
     "Charles Oliveira": "https://www.sherdog.com/fighter/Charles-Oliveira-30300",
     "Benoît Saint Denis" : "https://www.sherdog.com/fighter/Benoit-St-Denis-317103",
     "Ian Machado Garry" : "https://www.sherdog.com/fighter/Ian-Garry-268923"
+    "David Martinez":"https://www.sherdog.com/fighter/David-Martinez-221351",
+    "Steve Garcia":"https://www.sherdog.com/fighter/Steve-Garcia-50916",
+    "Yair Rodriguez":"https://www.sherdog.com/fighter/Yair-Rodriguez-106305",
+    "Jiří Procházka":"https://www.sherdog.com/fighter/Jiri-Prochazka-97529",
+    "Jan Błachowicz":"https://www.sherdog.com/fighter/Jan-Blachowicz-25821",
+    "Khalil Rountree Jr.":"https://www.sherdog.com/fighter/Khalil-Rountree-77674",
+    "Paulo Costa":"https://www.sherdog.com/fighter/Paulo-Costa-147165"
 }
 
-# --- TES CLASSEMENTS OFFICIELS ACTUALISÉS ---
+# --- TES CLASSEMENTS OFFICIELS ACTUALISÉS (VIA CAPTURES) ---
 CATEGORIES = {
+    "Poids Mouches": [
+        "Joshua Van", "Alexandre Pantoja", "Manel Kape", "Tatsuro Taira", 
+        "Brandon Royval", "Kyoji Horiguchi", "Lone'er Kavanagh", "Amir Albazi", 
+        "Asu Almabayev", "Brandon Moreno", "Alex Perez"
+    ],
+    "Poids Coqs": [
+        "Petr Yan", "Merab Dvalishvili", "Umar Nurmagomedov", "Sean O'Malley", 
+        "Cory Sandhagen", "Song Yadong", "Aiemann Zahabi", "Deiveson Figueiredo", 
+        "Mario Bautista", "David Martinez", "Marlon Vera"
+    ],
+    "Poids Plumes": [
+        "Alexander Volkanovski", "Movsar Evloev", "Diego Lopes", "Lerone Murphy", 
+        "Yair Rodriguez", "Aljamain Sterling", "Jean Silva", "Youssef Zalal", 
+        "Arnold Allen", "Steve Garcia", "Kevin Vallejos"
+    ],
     "Poids Légers": [
         "Ilia Topuria", "Justin Gaethje", "Arman Tsarukyan", "Charles Oliveira", 
         "Max Holloway", "Benoît Saint Denis", "Paddy Pimblett", "Mateusz Gamrot", 
@@ -32,7 +54,17 @@ CATEGORIES = {
     "Poids Moyens": [
         "Khamzat Chimaev", "Dricus Du Plessis", "Nassourdine Imavov", "Sean Strickland", 
         "Brendan Allen", "Caio Borralho", "Joe Pyfer", "Anthony Hernandez", 
-        "Reinier de Ridder", "Israel Adesanya", "Robert Whittaker"
+        "Reinier De Ridder", "Israel Adesanya", "Robert Whittaker"
+    ],
+    "Poids Mi-Lourds": [
+        "Carlos Ulberg", "Magomed Ankalaev", "Alex Pereira", "Jiří Procházka", 
+        "Jan Błachowicz", "Khalil Rountree Jr.", "Jamahal Hill", "Paulo Costa", 
+        "Azamat Murzakanov", "Dominick Reyes", "Bogdan Guskov"
+    ],
+    "Poids Lourds": [
+        "Tom Aspinall", "Ciryl Gane", "Alexander Volkov", "Sergei Pavlovich", 
+        "Waldo Cortes Acosta", "Josh Hokit", "Serghei Spivac", "Curtis Blaydes", 
+        "Rizvan Kuniev", "Derrick Lewis", "Ante Delija"
     ]
 }
 

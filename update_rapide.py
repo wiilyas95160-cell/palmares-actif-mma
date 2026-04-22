@@ -14,7 +14,16 @@ HEADERS = {
 URL_EXCEPTIONS = {
     "Charles Oliveira": "https://www.sherdog.com/fighter/Charles-Oliveira-30300",
     "Benoît Saint Denis": "https://www.sherdog.com/fighter/Benoit-St-Denis-317103",
-    "Khamzat Chimaev": "https://www.sherdog.com/fighter/Khamzat-Chimaev-280021"
+    "Khamzat Chimaev": "https://www.sherdog.com/fighter/Khamzat-Chimaev-280021",
+    "David Martinez":"https://www.sherdog.com/fighter/David-Martinez-221351",
+    "Steve Garcia":"https://www.sherdog.com/fighter/Steve-Garcia-50916",
+    "Yair Rodriguez":"https://www.sherdog.com/fighter/Yair-Rodriguez-106305",
+    "Jiří Procházka":"https://www.sherdog.com/fighter/Jiri-Prochazka-97529",
+    "Jan Błachowicz":"https://www.sherdog.com/fighter/Jan-Blachowicz-25821",
+    "Khalil Rountree Jr.":"https://www.sherdog.com/fighter/Khalil-Rountree-77674",
+    "Paulo Costa":"https://www.sherdog.com/fighter/Paulo-Costa-147165",
+    "Ian Machado Garry" : "https://www.sherdog.com/fighter/Ian-Garry-268923"
+
 }
 
 def trouver_url_sherdog(recherche):

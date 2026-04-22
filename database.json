@@ -1,4 +1,307 @@
 {
+    "Poids Mouches": [
+        {
+            "Nom": "Joshua Van",
+            "Palmares_Actif": "8 V - 1 D",
+            "Victoires_Actives": 8,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 18
+        },
+        {
+            "Nom": "Alexandre Pantoja",
+            "Palmares_Actif": "10 V - 2 D",
+            "Victoires_Actives": 10,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 36
+        },
+        {
+            "Nom": "Manel Kape",
+            "Palmares_Actif": "6 V - 3 D",
+            "Victoires_Actives": 6,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 29
+        },
+        {
+            "Nom": "Tatsuro Taira",
+            "Palmares_Actif": "7 V - 1 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 19
+        },
+        {
+            "Nom": "Brandon Royval",
+            "Palmares_Actif": "6 V - 5 D",
+            "Victoires_Actives": 6,
+            "Defaites_Actives": 5,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 26
+        },
+        {
+            "Nom": "Kyoji Horiguchi",
+            "Palmares_Actif": "4 V - 1 D",
+            "Victoires_Actives": 4,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 42
+        },
+        {
+            "Nom": "Lone'er Kavanagh",
+            "Palmares_Actif": "2 V - 1 D",
+            "Victoires_Actives": 2,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 11
+        },
+        {
+            "Nom": "Amir Albazi",
+            "Palmares_Actif": "2 V - 2 D",
+            "Victoires_Actives": 2,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 20
+        },
+        {
+            "Nom": "Asu Almabayev",
+            "Palmares_Actif": "4 V - 2 D",
+            "Victoires_Actives": 4,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 26
+        },
+        {
+            "Nom": "Brandon Moreno",
+            "Palmares_Actif": "7 V - 6 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 6,
+            "Nuls_Actifs": 1,
+            "NC_Actifs": 0,
+            "Total_Combats": 35
+        },
+        {
+            "Nom": "Alex Perez",
+            "Palmares_Actif": "1 V - 4 D",
+            "Victoires_Actives": 1,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 36
+        }
+    ],
+    "Poids Coqs": [
+        {
+            "Nom": "Petr Yan",
+            "Palmares_Actif": "7 V - 4 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 25
+        },
+        {
+            "Nom": "Merab Dvalishvili",
+            "Palmares_Actif": "8 V - 2 D",
+            "Victoires_Actives": 8,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 26
+        },
+        {
+            "Nom": "Umar Nurmagomedov",
+            "Palmares_Actif": "5 V - 1 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 21
+        },
+        {
+            "Nom": "Sean O'Malley",
+            "Palmares_Actif": "5 V - 3 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 23
+        },
+        {
+            "Nom": "Cory Sandhagen",
+            "Palmares_Actif": "5 V - 5 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 5,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 24
+        },
+        {
+            "Nom": "Song Yadong",
+            "Palmares_Actif": "6 V - 4 D",
+            "Victoires_Actives": 6,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 33
+        },
+        {
+            "Nom": "Aiemann Zahabi",
+            "Palmares_Actif": "5 V - 2 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 16
+        },
+        {
+            "Nom": "Deiveson Figueiredo",
+            "Palmares_Actif": "9 V - 5 D",
+            "Victoires_Actives": 9,
+            "Defaites_Actives": 5,
+            "Nuls_Actifs": 1,
+            "NC_Actifs": 0,
+            "Total_Combats": 32
+        },
+        {
+            "Nom": "Mario Bautista",
+            "Palmares_Actif": "5 V - 2 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 20
+        },
+        {
+            "Nom": "David Martinez",
+            "Palmares_Actif": "3 V - 1 D",
+            "Victoires_Actives": 3,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 15
+        },
+        {
+            "Nom": "Marlon Vera",
+            "Palmares_Actif": "3 V - 9 D",
+            "Victoires_Actives": 3,
+            "Defaites_Actives": 9,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 36
+        }
+    ],
+    "Poids Plumes": [
+        {
+            "Nom": "Alexander Volkanovski",
+            "Palmares_Actif": "10 V - 3 D",
+            "Victoires_Actives": 10,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 32
+        },
+        {
+            "Nom": "Movsar Evloev",
+            "Palmares_Actif": "6 V - 0 D",
+            "Victoires_Actives": 6,
+            "Defaites_Actives": 0,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 20
+        },
+        {
+            "Nom": "Diego Lopes",
+            "Palmares_Actif": "5 V - 4 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 35
+        },
+        {
+            "Nom": "Lerone Murphy",
+            "Palmares_Actif": "7 V - 1 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 19
+        },
+        {
+            "Nom": "Yair Rodriguez",
+            "Palmares_Actif": "6 V - 3 D",
+            "Victoires_Actives": 6,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 1,
+            "Total_Combats": 26
+        },
+        {
+            "Nom": "Aljamain Sterling",
+            "Palmares_Actif": "7 V - 2 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 30
+        },
+        {
+            "Nom": "Jean Silva",
+            "Palmares_Actif": "6 V - 1 D",
+            "Victoires_Actives": 6,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 20
+        },
+        {
+            "Nom": "Youssef Zalal",
+            "Palmares_Actif": "2 V - 4 D",
+            "Victoires_Actives": 2,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 1,
+            "NC_Actifs": 0,
+            "Total_Combats": 24
+        },
+        {
+            "Nom": "Arnold Allen",
+            "Palmares_Actif": "4 V - 3 D",
+            "Victoires_Actives": 4,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 24
+        },
+        {
+            "Nom": "Steve Garcia",
+            "Palmares_Actif": "7 V - 2 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 24
+        },
+        {
+            "Nom": "Kevin Vallejos",
+            "Palmares_Actif": "4 V - 1 D",
+            "Victoires_Actives": 4,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 19
+        }
+    ],
     "Poids Légers": [
         {
             "Nom": "Ilia Topuria",
@@ -275,7 +578,7 @@
             "Total_Combats": 19
         },
         {
-            "Nom": "Reinier de Ridder",
+            "Nom": "Reinier De Ridder",
             "Palmares_Actif": "4 V - 2 D",
             "Victoires_Actives": 4,
             "Defaites_Actives": 2,
@@ -300,6 +603,208 @@
             "Nuls_Actifs": 0,
             "NC_Actifs": 0,
             "Total_Combats": 35
+        }
+    ],
+    "Poids Mi-Lourds": [
+        {
+            "Nom": "Carlos Ulberg",
+            "Palmares_Actif": "6 V - 1 D",
+            "Victoires_Actives": 6,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 15
+        },
+        {
+            "Nom": "Magomed Ankalaev",
+            "Palmares_Actif": "8 V - 2 D",
+            "Victoires_Actives": 8,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 1,
+            "NC_Actifs": 1,
+            "Total_Combats": 24
+        },
+        {
+            "Nom": "Alex Pereira",
+            "Palmares_Actif": "9 V - 2 D",
+            "Victoires_Actives": 9,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 16
+        },
+        {
+            "Nom": "Jiří Procházka",
+            "Palmares_Actif": "5 V - 3 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 39
+        },
+        {
+            "Nom": "Jan Błachowicz",
+            "Palmares_Actif": "5 V - 2 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 2,
+            "NC_Actifs": 0,
+            "Total_Combats": 42
+        },
+        {
+            "Nom": "Khalil Rountree Jr.",
+            "Palmares_Actif": "5 V - 5 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 5,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 1,
+            "Total_Combats": 22
+        },
+        {
+            "Nom": "Jamahal Hill",
+            "Palmares_Actif": "2 V - 4 D",
+            "Victoires_Actives": 2,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 17
+        },
+        {
+            "Nom": "Paulo Costa",
+            "Palmares_Actif": "2 V - 4 D",
+            "Victoires_Actives": 2,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 20
+        },
+        {
+            "Nom": "Azamat Murzakanov",
+            "Palmares_Actif": "5 V - 1 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 17
+        },
+        {
+            "Nom": "Dominick Reyes",
+            "Palmares_Actif": "5 V - 4 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 21
+        },
+        {
+            "Nom": "Bogdan Guskov",
+            "Palmares_Actif": "3 V - 1 D",
+            "Victoires_Actives": 3,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 1,
+            "NC_Actifs": 0,
+            "Total_Combats": 22
+        }
+    ],
+    "Poids Lourds": [
+        {
+            "Nom": "Tom Aspinall",
+            "Palmares_Actif": "5 V - 1 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 1,
+            "Total_Combats": 19
+        },
+        {
+            "Nom": "Ciryl Gane",
+            "Palmares_Actif": "8 V - 0 D",
+            "Victoires_Actives": 8,
+            "Defaites_Actives": 0,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 1,
+            "Total_Combats": 16
+        },
+        {
+            "Nom": "Alexander Volkov",
+            "Palmares_Actif": "5 V - 5 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 5,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 50
+        },
+        {
+            "Nom": "Sergei Pavlovich",
+            "Palmares_Actif": "5 V - 2 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 2,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 23
+        },
+        {
+            "Nom": "Waldo Cortes Acosta",
+            "Palmares_Actif": "7 V - 1 D",
+            "Victoires_Actives": 7,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 19
+        },
+        {
+            "Nom": "Josh Hokit",
+            "Palmares_Actif": "3 V - 0 D",
+            "Victoires_Actives": 3,
+            "Defaites_Actives": 0,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 9
+        },
+        {
+            "Nom": "Serghei Spivac",
+            "Palmares_Actif": "4 V - 5 D",
+            "Victoires_Actives": 4,
+            "Defaites_Actives": 5,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 24
+        },
+        {
+            "Nom": "Curtis Blaydes",
+            "Palmares_Actif": "5 V - 4 D",
+            "Victoires_Actives": 5,
+            "Defaites_Actives": 4,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 26
+        },
+        {
+            "Nom": "Rizvan Kuniev",
+            "Palmares_Actif": "1 V - 1 D",
+            "Victoires_Actives": 1,
+            "Defaites_Actives": 1,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 18
+        },
+        {
+            "Nom": "Derrick Lewis",
+            "Palmares_Actif": "4 V - 6 D",
+            "Victoires_Actives": 4,
+            "Defaites_Actives": 6,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 43
+        },
+        {
+            "Nom": "Ante Delija",
+            "Palmares_Actif": "1 V - 3 D",
+            "Victoires_Actives": 1,
+            "Defaites_Actives": 3,
+            "Nuls_Actifs": 0,
+            "NC_Actifs": 0,
+            "Total_Combats": 34
         }
     ]
 }
